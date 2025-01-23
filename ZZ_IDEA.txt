@@ -1,0 +1,50 @@
+1. Landing Page:
+    1.1. Register for new wifi connection.
+    1.2. Proceed with order.
+    1.3. Plan change.
+    1.4. Raise complaint.
+
+===================================================
+
+1.1. Register for new wifi connection:
+    >> Enter mobile number, name and address.
+    >> GET_WIFI_PROCESS begins.
+
+1.2. Proceed with order:
+    >> Enter registered mobile number.
+    >> GET_WIFI_PROCESS continues from where it is right now.
+
+1.3. Plan change:
+    >> PLAN_CHANGE_PROCESS
+
+1.4. Raise complaint:
+    >> RAISE_COMPLAINT_PROCESS
+
+=====================================================
+GET_WIFI_PROCESS:
+    >> Submit identity documents.
+    >> Backend | verification.
+    >> Backend | Order confirmation or rejection.
+    >> Choose plan.
+    >> Make payment.
+    >> Backend | Notify installation team.
+    >> Team marks installation success or failure.
+    >> If failure:
+        >> Backend | Initiate REFUND_PROCESS
+    >> Process end.
+
+PLAN_CHANGE_PROCESS:
+    >> Enter registered mobile number:
+    >> Backend | Current plan is shown. Also, all available plans are displayed.
+    >> Choose any plan.
+    >> Make remaining payment. (if any)
+    >> Process end.
+
+RAISE_COMPLAINT_PROCESS:
+    >> Enter registered mobile number.
+    >> Enter complaint.
+    >> Backend | Notify a technician.
+    >> Technician visits and marks as 'resolved' or 'failed'.
+    >> If failed:
+        >> Backend | Initiate REFUND_PROCESS [If any balance amount due]
+    >> Process end.
